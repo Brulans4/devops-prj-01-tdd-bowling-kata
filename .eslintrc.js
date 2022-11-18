@@ -11,10 +11,14 @@ module.exports = {
         "ecmaVersion": "latest"
     },
     "rules": {
+        /*
+        for unix machine
+        
         'linebreak-style': [
             'error',
             'unix'
         ],
+        */
         'semi': [
             'error',
             'always'
