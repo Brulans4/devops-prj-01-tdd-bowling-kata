@@ -2,10 +2,14 @@
   "name": "devops-prj-01-tdd-bowling-kata",
   "version": "1.0.0",
   "description": "DevOps project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "cz"
+    "commit": "cz",
+    "prettier": "prettier -c \"src/**/*.js\"",
+    "prettier:fix": "prettier -w \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint --fix \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,10 @@
   "homepage": "https://github.com/Brulans4/devops-prj-01-tdd-bowling-kata#readme",
   "devDependencies": {
     "commitizen": "^4.2.5",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "8.5.0",
+    "prettier": "2.7.1"
   },
   "config": {
     "commitizen": {
