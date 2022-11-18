@@ -2,7 +2,7 @@
 ---
 # Authors
 
-## Alagoz Efe
-## De jacquier de Rosée Julien
-## Heymans Nicolas
+- Alagoz Efe
+- De jacquier de Rosée Julien
+- Heymans Nicolas
 
