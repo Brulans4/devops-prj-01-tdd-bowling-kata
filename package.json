@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll",
     "commit": "cz",
     "prettier": "prettier -c \"src/**/*.js\"",
     "prettier:fix": "prettier -w \"src/**/*.js\"",
