@@ -1,12 +1,19 @@
-module.exports = class Game {
-    
+module.exports = class bowlingKata {
 
-    roll = function(pins){
-        
+    constructor() {
+        this.tabRolls = [];
+    }
+
+    roll(pins) {
+        this.tabRolls.push(pins);
     };
 
-    score = function(){
-        return 0;
+    score() {
+        let result = 0;
+        for(let i = 0; i < 20; i++) {
+            result += this.tabRolls[i];
+        }
+        return result;
     };
 };
 
