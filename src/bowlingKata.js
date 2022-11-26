@@ -10,8 +10,16 @@ module.exports = class bowlingKata {
 
     score() {
         let result = 0;
-        for(let i = 0; i < 20; i++) {
-            result += this.tabRolls[i];
+        let index = 0;
+
+        for(let i = 0; i < 10; i++) {
+            if(this.tabRolls[index] + this.tabRolls[index+1] == 10){
+                result += this.tabRolls[index] + this.tabRolls[index+1] + this.tabRolls[index+2];
+            }
+            else{
+                result += this.tabRolls[index] + this.tabRolls[index+1];
+            }
+            index += 2;
         }
         return result;
     };

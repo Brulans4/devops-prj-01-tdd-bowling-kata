@@ -20,6 +20,15 @@ describe("Game Bowling Kata", function () {
     expect(bowling.score()).toBe(20);
   });
 
+  // Test 3.1
+  it("Can roll a spare", function() {
+    bowling.roll(5);
+    bowling.roll(5); //spare
+    bowling.roll(3);
+    rollMany(0, 17);
+    expect(bowling.score()).toBe(16);
+  });
+
   let rollMany = function (pins, rolls) {
     for (var i = 0; i < rolls; i++) {
       bowling.roll(pins);
