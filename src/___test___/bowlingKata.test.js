@@ -29,6 +29,16 @@ describe("Game Bowling Kata", function () {
     expect(bowling.score()).toBe(16);
   });
 
+  //test 4.1
+  it ('can roll a strike', function () {
+    bowling.roll(10);
+    bowling.roll(4);
+    bowling.roll(3);
+    rollMany(0, 16);
+    expect(bowling.score()).toBe(24);
+
+  });
+
   let rollMany = function (pins, rolls) {
     for (var i = 0; i < rolls; i++) {
       bowling.roll(pins);
