@@ -20,7 +20,7 @@ describe("Game Bowling Kata", function () {
     expect(bowling.score()).toBe(20);
   });
 
-  // Test 3.1
+  // Test 3.2
   it("Can roll a spare", function() {
     bowling.roll(5);
     bowling.roll(5); //spare

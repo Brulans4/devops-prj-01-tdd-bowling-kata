@@ -11,17 +11,30 @@ module.exports = class bowlingKata {
     score() {
         let result = 0;
         let index = 0;
+        let game = this;
 
         for(let i = 0; i < 10; i++) {
-            if(this.tabRolls[index] + this.tabRolls[index+1] == 10){
-                result += this.tabRolls[index] + this.tabRolls[index+1] + this.tabRolls[index+2];
+            if(isSpare( )){
+                result += getSpareScore();
             }
             else{
-                result += this.tabRolls[index] + this.tabRolls[index+1];
+                result += getScore();
             }
             index += 2;
         }
         return result;
+
+        function isSpare() {
+            return game.tabRolls[index] + game.tabRolls[index+1] == 10;
+        }
+
+        function getSpareScore() {
+            return game.tabRolls[index] + game.tabRolls[index+1] + game.tabRolls[index+2];
+        }
+
+        function getScore() {
+            return game.tabRolls[index] + game.tabRolls[index+1];
+        }
     };
 };
 
