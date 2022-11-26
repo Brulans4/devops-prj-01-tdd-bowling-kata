@@ -1,12 +1,11 @@
-const bowlingKata = require('../bowlingKata');
+const bowlingKata = require("../bowlingKata");
 
 let bowling;
 
 describe("Game Bowling Kata", function () {
-
-   beforeEach(function () {
-      bowling = new bowlingKata();
-   });
+  beforeEach(function () {
+    bowling = new bowlingKata();
+  });
 
   // Test 1.3
   it("Can roll", function () {
@@ -15,13 +14,13 @@ describe("Game Bowling Kata", function () {
   });
 
   // Test 2.1
-  it("Can roll all ones", function() {
+  it("Can roll all ones", function () {
     rollMany(1, 20);
     expect(bowling.score()).toBe(20);
   });
 
   // Test 3.2
-  it("Can roll a spare", function() {
+  it("Can roll a spare", function () {
     bowling.roll(5);
     bowling.roll(5); //spare
     bowling.roll(3);
@@ -29,14 +28,19 @@ describe("Game Bowling Kata", function () {
     expect(bowling.score()).toBe(16);
   });
 
-  //test 4.1
-  it ('can roll a strike', function () {
+  // Test 4.1
+  it("Can roll a strike", function () {
     bowling.roll(10);
     bowling.roll(4);
     bowling.roll(3);
     rollMany(0, 16);
     expect(bowling.score()).toBe(24);
+  });
 
+  // Test 5.1
+  it("Can roll a perfect game", function () {
+    rollMany(10, 12);
+    expect(bowling.score()).toBe(300);
   });
 
   let rollMany = function (pins, rolls) {
@@ -45,7 +49,3 @@ describe("Game Bowling Kata", function () {
     }
   };
 });
-
-
-
-
